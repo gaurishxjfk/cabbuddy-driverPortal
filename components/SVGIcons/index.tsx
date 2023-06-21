@@ -11,3 +11,24 @@ export const Location: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     <path d="M12 2c-4.418 0-8 3.582-8 8 0 3.255 2.363 5.958 4.866 8.819.792.906 1.612 1.843 2.342 2.791a1 1 0 0 0 1.584 0c.73-.948 1.55-1.885 2.342-2.791C17.637 15.958 20 13.255 20 10c0-4.418-3.582-8-8-8zm0 11a3 3 0 1 1 3-3 3 3 0 0 1-3 3z" />
   </svg>
 );
+
+export const User: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg viewBox="0 0 20 20" {...props} xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 0C7.25 0 5 2.8 5 6.25C5 9.7 7.25 12.5 10 12.5C12.75 12.5 15 9.7 15 6.25C15 2.8 12.75 0 10 0ZM4.775 12.5C2.125 12.625 0 14.8 0 17.5V20H20V17.5C20 14.8 17.9 12.625 15.225 12.5C13.875 14.025 12.025 15 10 15C7.975 15 6.125 14.025 4.775 12.5Z" />
+  </svg>
+);
+
+export const Star: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg
+    width="22"
+    height="22"
+    viewBox="0 0 22 22"
+    fill="none"
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M11 0L8.25 8.25H0L6.875 13.75L4.125 22L11 16.5L17.875 22L15.125 13.75L22 8.25H13.75L11 0Z"
+    />
+  </svg>
+);

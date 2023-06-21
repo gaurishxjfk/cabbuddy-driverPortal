@@ -1,16 +1,16 @@
-import Nav from '@/components/Navbar'
-import Hero from '@/components/Hero'
-import ConfirmBooking from '@/components/Modals/ConfirmBooking'
+"use client"
+import Hero from "@/components/Hero";
+import ConfirmBooking from "@/components/Modals/ConfirmBooking/";
+import { appStore } from "@/lib/appStore";
 
 export default function Home() {
+  const {isCarModal} = appStore(state => state)
+  console.log(isCarModal)
   return (
-    <main className="h-screen w-full bg-mainbg relative">
-      {/* Navbar */}
-      <Nav />
+    <main className="w-full bg-mainbg relative">
       {/* Hero component */}
-        <Hero />
-          <ConfirmBooking />
-      
+      <Hero />
+      {isCarModal && <ConfirmBooking />}
     </main>
-  )
+  );
 }

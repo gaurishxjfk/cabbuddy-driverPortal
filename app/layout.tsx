@@ -1,5 +1,6 @@
 import Head from "next/head";
 import "./globals.css";
+import Nav from "@/components/Navbar";
 
 export const metadata = {
   title: "CabBuddy",
@@ -13,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="relative h-screen bg-[#E0F4FB]">
+        {/* Navbar */}
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }

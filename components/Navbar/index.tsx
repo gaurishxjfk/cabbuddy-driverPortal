@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Encode_Sans_Semi_Condensed } from "@next/font/google";
+import  {Encode_Sans_Semi_Condensed}  from "next/font/google";
 import React, { useState } from "react";
 
 import cabbuddy from "@/public/assets/icons/cabbuddy.svg";
@@ -15,7 +15,7 @@ const workSans = Encode_Sans_Semi_Condensed({
 const index = () => {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="py-6 px-[1em] md:px-[3em] lg:px-[5em] flex justify-between items-center ">
+    <nav className="bg-[#E0F4FB] py-6 px-[1em] md:px-[3em] lg:px-[5em] flex justify-between items-center ">
       <div className="w-[8rem] sm:w-[12.5rem] ">
         <Image src={cabbuddy} alt="lets go icon" />
       </div>

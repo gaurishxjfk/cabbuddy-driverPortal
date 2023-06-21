@@ -7,18 +7,26 @@ import arrow from "@/public/assets/icons/arrow.svg";
 import heroImgClient from "@/public/assets/heroImgClient.svg";
 import letsGo from "@/public/assets/icons/letsGo.svg";
 import { Cross, Location } from "@/components/SVGIcons";
+import { appStore } from "@/lib/appStore";
 
 const index = () => {
+  const { toggleCarModal } = appStore(state => state)
+
   const [destination, setDestination] = useState("");
   const [togglePickUp, setTogglePickUp] = useState(false);
   const [pickUp, setPickUp] = useState("");
-  const handleSubmit = () => setTogglePickUp(destination.length !== 0);
+  const handleSubmit = () => {
+    setTogglePickUp(destination.length !== 0);
+    (destination.length !== 0 && pickUp.length !== 0) && toggleCarModal()
+  };
 
   useEffect(() => {
-    if(destination.length === 0) return setTogglePickUp(false)    
+    if(destination.length === 0){
+      setTogglePickUp(false)
+      setPickUp("")
+    }
   }, [destination])
   
-
 
   return (
     <section className="flex flex-col md:flex-row relative">
