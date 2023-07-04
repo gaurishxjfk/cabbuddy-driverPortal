@@ -16,8 +16,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="relative h-screen bg-[#E0F4FB]">
         {/* Navbar */}
-        <Nav />
+        <nav className="fixed top-0 z-40 w-full"><Nav /></nav>
+        <main className="pt-12 mt-16">
         {children}
+        </main>
       </body>
     </html>
   );
